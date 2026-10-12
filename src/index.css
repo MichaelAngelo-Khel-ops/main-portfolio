@@ -118,9 +118,10 @@ button:-moz-focusring,
   --font-main--weight: 400;
   --font-main--size: 16px;
 
-  --font-subheading--family: 'Inter', sans-serif;
+  --font-subheading--family: "SF Mono", Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;
   --font-subheading--weight: 400;
   --font-subheading--size: 16px;
+
 }
 
 /* css color variables */
@@ -153,6 +154,7 @@ button:-moz-focusring,
   h1,h2,h3,h4,h5,h6 {
     color: var(--color-heading);
     font-family: var(--font-main--family);
+    font-weight: var(--font-h1--weight);
   }
 
   p, li {
