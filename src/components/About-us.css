@@ -86,7 +86,9 @@
 
 .ms-about__content-brief {
     display: grid;
-    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    
 }
 
 /* Mobile layout */

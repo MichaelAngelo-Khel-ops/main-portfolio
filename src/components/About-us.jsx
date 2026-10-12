@@ -1,5 +1,6 @@
 import "./About-us.css";
 import image from "../assets/my-profile.jpg";
+import AboutUsBlocks from "./AboutUsBlocks";
 
 export default function AboutUs() {
     return (
@@ -16,8 +17,7 @@ export default function AboutUs() {
               <div className="ms-about__content-image-container">
                 <img
                   src={image}
-                  alt=""
-                  srcset=""
+                  alt="profile image"
                   className="ms-about__content-image"
                 />
               </div>
@@ -46,7 +46,28 @@ export default function AboutUs() {
                     with your customers.
                   </p>
                 </div>
-                <div className="ms-about__content-brief"></div>
+                <div className="ms-about__content-brief">
+                  <AboutUsBlocks
+                    Icon={<i className="fa-brands fa-html5"></i>}
+                    firstText="Analysis → "
+                    secondText="Debugging"
+                  />
+                  <AboutUsBlocks
+                    Icon={<i className="fa-brands fa-css3-alt"></i>}
+                    firstText="Customer Service → "
+                    secondText="User Experience"
+                  />
+                  <AboutUsBlocks
+                    Icon={<i className="fa-brands fa-js-square"></i>}
+                    firstText="Attention to Details → "
+                    secondText="Code Quality"
+                  />
+                  <AboutUsBlocks
+                    Icon={<i className="fa-brands fa-react"></i>}
+                    firstText="Output → "
+                    secondText="Production"
+                  />
+                </div>
               </div>
             </div>
           </div>
