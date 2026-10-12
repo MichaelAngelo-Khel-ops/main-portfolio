@@ -17,7 +17,7 @@ function Header() {
         </nav>
         <button
           type="button"
-          class="ms-header__mobile-toggle"
+          className="ms-header__mobile-toggle"
           id="mobile-menu-toggle"
         >
           <span></span>

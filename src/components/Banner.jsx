@@ -5,34 +5,34 @@ export default function Banner() {
 
     return (
       <div className="ms-banner">
-        <div class="ms-banner-wrapper">
+        <div className="ms-banner-wrapper">
           <img src="" alt="" />
 
-          <div class="ms-banner__background-overlay"></div>
+          <div className="ms-banner__background-overlay"></div>
 
-          <div class="ms-banner__content">
-            <div class="ms-banner__text">
-              <h1 class="ms-banner__title ms-section-heading">
-                Michael Angelo Salonga
+          <div className="ms-banner__content">
+            <div className="ms-banner__text">
+              <h1 className="ms-banner__title">
+                Michael Angelo <span className="ms-banner-heading">Salonga</span>
               </h1>
-              <span class="ms-banner__subtitle sub-heading">
+              <span className="ms-banner__subtitle sub-heading">
                 Transforming business ideas into responsive, reliable, and
                 engaging digital experiences.
               </span>
             </div>
 
-            <div class="ms-banner__button-container">
-              <div class="ms-banner__button">
+            <div className="ms-banner__button-container">
+              <div className="ms-banner__button">
                 <a
-                  href=""
-                  class="ms-banner__button-link ms-banner__button-portfolio button-primary"
+                  href="#"
+                  className="ms-banner__button-link ms-banner__button-portfolio button-primary"
                 >
                   VIEW PORTFOLIO
                 </a>
               </div>
 
-              <div class="ms-banner__button ms-banner__button--contact">
-                <a href="" class="ms-banner__button-link button-secondary">
+              <div className="ms-banner__button ms-banner__button--contact">
+                <a href="#" className="ms-banner__button-link button-secondary">
                   GET IN TOUCH
                 </a>
               </div>

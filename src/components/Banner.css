@@ -90,6 +90,13 @@
     gap: 1rem;
 }
 
+
+.ms-banner-heading {
+    font-family: var(--font-main--family);
+    color: var(--color-secondary-text);
+    font-style: italic;
+}
+
 @media screen and (max-width: 749px) {
     .ms-banner-wrapper, .ms-banner__background-image {
         min-height: 100svh;
