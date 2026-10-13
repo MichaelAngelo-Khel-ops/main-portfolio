@@ -1,6 +1,8 @@
 import Header from "./components/Header";
 import Banner from "./components/Banner";
 import AboutUs from "./components/About-us";
+import Tools from "./components/Tools";
+import ProjectAccordion from "./components/ProjectAccordion";
 
 function App() {
   return (
@@ -8,6 +10,8 @@ function App() {
       <Header />
       <Banner />
       <AboutUs />
+      <Tools />
+      <ProjectAccordion />
     </main>
   );
 }

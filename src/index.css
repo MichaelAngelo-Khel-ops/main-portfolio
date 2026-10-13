@@ -70,6 +70,12 @@ button:-moz-focusring,
   outline: 1px dotted ButtonText;
 }
 
+.icon {
+  color: var(--color-primary-text);
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
 :-moz-ui-invalid {
   box-shadow: none;
 }
@@ -215,6 +221,8 @@ button:-moz-focusring,
 
   p, li {
     color: var(--color-primary-text);
+    line-height: 1.6;
+    font-size: var(--font-main--size);
   }
 
   .sub-heading {

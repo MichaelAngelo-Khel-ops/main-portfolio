@@ -2,10 +2,15 @@ import "./About-us.css";
 import image from "../assets/my-profile.jpg";
 import AboutUsBlocks from "./AboutUsBlocks";
 
+import CopyIcon from "./svgIcon/CopyIcon";
+import ChatIcon from "./svgIcon/ChatIcon";
+import CodeIcon from "./svgIcon/CodeIcon";
+import PeopleIcon from "./svgIcon/PeopleIcon";
+
 export default function AboutUs() {
     return (
       <div className="ms-about-us">
-        <div class="ms-about__background-color"></div>
+        <div className="ms-about__background-color"></div>
         <div className="ms-about-wrapper ">
           <div className="ms-about__content">
             <div className="ms-about__content-title">
@@ -48,22 +53,22 @@ export default function AboutUs() {
                 </div>
                 <div className="ms-about__content-brief">
                   <AboutUsBlocks
-                    Icon={<i className="fa-brands fa-html5"></i>}
+                    Icon={<CodeIcon />}
                     firstText="Analysis → "
                     secondText="Debugging"
                   />
                   <AboutUsBlocks
-                    Icon={<i className="fa-brands fa-css3-alt"></i>}
+                    Icon={<PeopleIcon />}
                     firstText="Customer Service → "
                     secondText="User Experience"
                   />
                   <AboutUsBlocks
-                    Icon={<i className="fa-brands fa-js-square"></i>}
+                    Icon={<CopyIcon />}
                     firstText="Attention to Details → "
                     secondText="Code Quality"
                   />
                   <AboutUsBlocks
-                    Icon={<i className="fa-brands fa-react"></i>}
+                    Icon={<ChatIcon />}
                     firstText="Output → "
                     secondText="Production"
                   />

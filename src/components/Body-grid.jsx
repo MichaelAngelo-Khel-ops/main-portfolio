@@ -1,5 +1,7 @@
 export default function BodyGrid(){
     return(
-        <div className="body-grid"></div>
+        <div className="body-grid">
+            {/* comments */}
+        </div>
     );
 }
