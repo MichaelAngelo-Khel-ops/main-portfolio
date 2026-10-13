@@ -2,14 +2,8 @@
 /* SECTION */
 
 .experiences-section {
-  --experience-bg: #1b1f19;
-  --experience-text: #f4f0e9;
-  --experience-muted: #9a9e91;
-  --experience-accent: #a7d971;
-  --experience-divider: #30362d;
-
-  background: var(--experience-bg);
-  color: var(--experience-text);
+  background: var(--color-section-background);
+  color: var(--color-foreground);
 
   padding: 90px 5%;
   z-index: 1;
@@ -30,7 +24,7 @@
 .experiences-section__heading h2 {
   margin: 0;
 
-  font-family: Georgia, serif;
+  font-family: var(--font-heading-family);
   font-size: clamp(3rem, 6vw, 5rem);
   font-weight: 400;
   line-height: 1.1;
@@ -41,7 +35,7 @@
   width: 125px;
   height: 3px;
 
-  background: var(--experience-accent);
+  background: var(--color-secondary-text);
   margin: 16px auto 0;
 }
 
@@ -49,7 +43,7 @@
 
 .experience {
   padding: 32px 0;
-  border-bottom: 1px solid var(--experience-divider);
+  border-bottom: 1px solid var(--color-border);
 }
 
 .experience:first-child {
@@ -70,7 +64,7 @@
 }
 
 .experience__role {
-  font-family: Georgia, serif;
+  font-family: var(--font-heading-family);
   font-size: clamp(1.8rem, 3vw, 2.5rem);
   font-weight: 400;
   line-height: 1.2;
@@ -79,8 +73,8 @@
 }
 
 .experience__company {
-  font-family: monospace;
-  color: var(--experience-muted);
+  font-family: var(--font-subheading-family);
+  color: var(--color-primary-text);
   font-size: 0.95rem;
   letter-spacing: 0.02em;
 
@@ -106,14 +100,14 @@
 }
 
 .experience__highlights li {
-  color: var(--experience-muted);
+  color: var(--color-primary-text);
   font-size: 1rem;
   line-height: 1.5;
   padding-left: 2px;
 }
 
 .experience__highlights li::marker {
-  color: var(--experience-accent);
+  color: var(--color-secondary-text);
   font-size: 0.85em;
 }
 
@@ -137,7 +131,7 @@
   .experience__date {
     white-space: normal;
     margin: 0;
-    color: var(--experience-accent);
+    color: var(--color-secondary-text);
     font-size: 0.9rem;
   }
 

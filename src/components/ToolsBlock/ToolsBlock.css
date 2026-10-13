@@ -21,6 +21,6 @@ li::marker{
 .ToolsBlock-wrapper{
     padding: 30px 20px;
     border: 1px solid var(--color-input-border);
-    background-color: #161A14;
+    background-color: var(--color-surface);
     height: 100%;
 }

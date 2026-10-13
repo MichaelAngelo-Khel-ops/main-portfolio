@@ -6,15 +6,15 @@ export default function Experiences() {
   return (
     <section
       className="experiences-section"
-      id="experiences"
+      id="Experience"
       aria-labelledby="experiences-title"
     >
       <div className="experiences-section__container">
-        <header className="experiences-section__heading">
+        <div className="experiences-section__heading">
           <h2 id="experiences-title">Experiences</h2>
 
           <span className="experiences-section__underline" aria-hidden="true" />
-        </header>
+        </div>
 
         <div className="experiences-section__list">
           {experiences.map((experience) => (

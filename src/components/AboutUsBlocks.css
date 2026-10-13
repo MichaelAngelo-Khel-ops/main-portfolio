@@ -19,13 +19,13 @@
 
 .about-container__text-description {
     color: var(--color-secondary-text);
-    font-family: var(--font-subheading--family);
+    font-family: var(--font-body-family);
 }
 
 .about-container__text-title {
     text-align: left;
     color: var(--color-primary-text);
-    font-family: var(--font-subheading--family);
+    font-family: var(--font-body-family);
 }
 
 .about-container__text-content .about-container__text-type {

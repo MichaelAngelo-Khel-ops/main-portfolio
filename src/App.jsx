@@ -4,6 +4,7 @@ import AboutUs from "./components/About-us";
 import Tools from "./components/Tools";
 import ProjectAccordion from "./components/ProjectAccordion";
 import Experiences from "./components/Experiences";
+import Contact from "./components/Contact";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Tools />
       <ProjectAccordion />
       <Experiences />
+      <Contact />
     </main>
   );
 }

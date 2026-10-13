@@ -5,7 +5,7 @@ export default function AboutUsBlocks({ Icon, firstText, secondText }) {
     <div className="about-container">
       {Icon}
 
-      <div className="about-container__text-content sub-heading">
+      <div className="about-container__text-content">
         <p>
           <span className="about-container__text-title">{firstText}</span>
           <span className="about-container__text-type">{secondText}</span>

@@ -31,7 +31,7 @@
 .ms-banner__background-overlay {
     position: absolute;
     inset: 0;
-    background: rgba(0, 0, 0, .5);
+    background: var(--color-banner-overlay);
 }
 
 .ms-banner__content {

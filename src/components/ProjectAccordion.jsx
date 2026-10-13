@@ -13,7 +13,7 @@ export default function ProjectAccordion() {
   }
 
   return (
-    <section className="projects" id="projects">
+    <section className="projects" id="Projects">
       <div className="projects__container">
         <div className="projects__header">
           <h1>Project Journal</h1>

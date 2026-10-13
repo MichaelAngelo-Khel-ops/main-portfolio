@@ -1,12 +1,7 @@
 
 .projects {
-  --bg: #1c2019;
-  --text: #f5f1e8;
-  --muted: #8b9285;
-  --accent: #a7d971;
-
-  background: var(--bg);
-  color: var(--text);
+  background: var(--color-section-background);
+  color: var(--color-foreground);
   padding: 80px 5%;
   z-index: 1;
 }
@@ -36,14 +31,14 @@
   display: block;
   width: 125px;
   height: 3px;
-  background: var(--accent);
+  background: var(--color-secondary-text);
   margin: 16px auto 0;
 }
 
 /* PROJECT ITEMS */
 
 .project {
-  border-bottom: 1px solid #343a31;
+  border-bottom: 1px solid var(--color-border);
 }
 
 .project__heading {
@@ -66,12 +61,12 @@
 }
 
 .project__trigger:focus-visible {
-  outline: 2px solid var(--accent);
+  outline: 2px solid var(--color-secondary-text);
   outline-offset: 5px;
 }
 
 .project__number {
-  color: var(--accent);
+  color: var(--color-secondary-text);
   font-size: 1rem;
 }
 
@@ -83,21 +78,21 @@
 }
 
 .project__title {
-  font-family: Georgia, serif;
+  font-family: var(--font-heading-family);
   font-size: clamp(2rem, 3vw, 2.8rem);
   font-weight: 400;
   line-height: 1.1;
 }
 
 .project__tech {
-  font-family: monospace;
+  font-family: var(--font-subheading-family);
   font-size: 0.8rem;
-  color: var(--muted);
+  color: var(--color-primary-text);
   letter-spacing: 0.02em;
 }
 
 .project__icon {
-  color: var(--muted);
+  color: var(--color-primary-text);
   font-size: 1.5rem;
   text-align: center;
 }
@@ -117,7 +112,7 @@
 }
 
 .project__description {
-  color: var(--muted);
+  color: var(--color-primary-text);
   font-size: 1rem;
   line-height: 1.8;
   margin: 0 0 28px;
@@ -139,13 +134,13 @@
 .project__meta strong,
 .project__credits strong {
   font-weight: 600;
-  color: var(--text);
+  color: var(--color-foreground);
 }
 
 .project__link {
   display: inline-flex;
   align-items: center;
-  color: var(--text);
+  color: var(--color-foreground);
   text-decoration: none;
   padding: 10px 0;
   border-bottom: 1px solid transparent;
@@ -153,7 +148,7 @@
 }
 
 .project__link:hover {
-  border-color: var(--accent);
+  border-color: var(--color-secondary-text);
 }
 
 /* PROJECT IMAGE */
@@ -184,7 +179,7 @@
 }
 
 .project__credits a {
-  color: var(--text);
+  color: var(--color-foreground);
   text-decoration: none;
 }
 

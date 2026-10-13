@@ -1,6 +1,18 @@
+import { useEffect, useState } from "react";
+import { Moon, Sun } from "lucide-react";
 import "./Header.css";
 
 function Header() {
+  const [isLightMode, setIsLightMode] = useState(false);
+
+  useEffect(() => {
+    document.documentElement.classList.toggle("light-mode", isLightMode);
+  }, [isLightMode]);
+
+  function toggleTheme() {
+    setIsLightMode((currentMode) => !currentMode);
+  }
+
   return (
     <header>
       <a href="#Home">
@@ -17,12 +29,12 @@ function Header() {
         </nav>
         <button
           type="button"
-          className="ms-header__mobile-toggle"
-          id="mobile-menu-toggle"
+          className="theme-toggle"
+          onClick={toggleTheme}
+          aria-label={`Switch to ${isLightMode ? "dark" : "light"} mode`}
+          aria-pressed={isLightMode}
         >
-          <span></span>
-          <span></span>
-          <span></span>
+          {isLightMode ? <Moon size={18} /> : <Sun size={18} />}
         </button>
       </div>
     </header>
