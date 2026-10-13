@@ -71,6 +71,10 @@ export default function ProjectAccordion() {
                         {project.description}
                       </p>
 
+                      {project.demo && (
+                        <p className="project__description">{project.demo}</p>
+                      )}
+
                       <div className="project__meta">
                         <p>
                           <strong>Framework:</strong> {project.framework}
@@ -92,6 +96,17 @@ export default function ProjectAccordion() {
                           className="project__link"
                         >
                           View Live Project ↗
+                        </a>
+                      )}
+
+                      {project.liveCode && (
+                        <a
+                          href={project.liveCode}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="project__Code"
+                        >
+                          View Code ↗
                         </a>
                       )}
                     </div>

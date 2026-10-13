@@ -137,7 +137,7 @@
   color: var(--color-foreground);
 }
 
-.project__link {
+.project__link, .project__Code {
   display: inline-flex;
   align-items: center;
   color: var(--color-foreground);
@@ -147,8 +147,12 @@
   transition: border-color 0.2s ease;
 }
 
-.project__link:hover {
+.project__link:hover, .project__Code:hover {
   border-color: var(--color-secondary-text);
+}
+
+.project__link {
+  margin-right: 20px;
 }
 
 /* PROJECT IMAGE */
