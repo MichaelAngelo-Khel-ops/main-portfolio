@@ -1,0 +1,148 @@
+
+/* SECTION */
+
+.experiences-section {
+  --experience-bg: #1b1f19;
+  --experience-text: #f4f0e9;
+  --experience-muted: #9a9e91;
+  --experience-accent: #a7d971;
+  --experience-divider: #30362d;
+
+  background: var(--experience-bg);
+  color: var(--experience-text);
+
+  padding: 90px 5%;
+  z-index: 1;
+}
+
+.experiences-section__container {
+  max-width: 1500px;
+  margin-inline: auto;
+}
+
+/* SECTION HEADING */
+
+.experiences-section__heading {
+  text-align: center;
+  margin-bottom: 85px;
+}
+
+.experiences-section__heading h2 {
+  margin: 0;
+
+  font-family: Georgia, serif;
+  font-size: clamp(3rem, 6vw, 5rem);
+  font-weight: 400;
+  line-height: 1.1;
+}
+
+.experiences-section__underline {
+  display: block;
+  width: 125px;
+  height: 3px;
+
+  background: var(--experience-accent);
+  margin: 16px auto 0;
+}
+
+/* EXPERIENCE ITEM */
+
+.experience {
+  padding: 32px 0;
+  border-bottom: 1px solid var(--experience-divider);
+}
+
+.experience:first-child {
+  padding-top: 0;
+}
+
+.experience__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 25px;
+
+  margin-bottom: 28px;
+}
+
+.experience__info {
+  min-width: 0;
+}
+
+.experience__role {
+  font-family: Georgia, serif;
+  font-size: clamp(1.8rem, 3vw, 2.5rem);
+  font-weight: 400;
+  line-height: 1.2;
+
+  margin: 0 0 5px;
+}
+
+.experience__company {
+  font-family: monospace;
+  color: var(--experience-muted);
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+
+  margin: 0;
+}
+
+.experience__date {
+  white-space: nowrap;
+  font-size: 1rem;
+  margin: 6px 0 0;
+}
+
+/* DESCRIPTION LIST */
+
+.experience__highlights {
+  list-style: square;
+  padding-left: 18px;
+  margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.experience__highlights li {
+  color: var(--experience-muted);
+  font-size: 1rem;
+  line-height: 1.5;
+  padding-left: 2px;
+}
+
+.experience__highlights li::marker {
+  color: var(--experience-accent);
+  font-size: 0.85em;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 768px) {
+  .experiences-section {
+    padding: 70px 20px;
+  }
+
+  .experiences-section__heading {
+    margin-bottom: 55px;
+  }
+
+  .experience__header {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 24px;
+  }
+
+  .experience__date {
+    white-space: normal;
+    margin: 0;
+    color: var(--experience-accent);
+    font-size: 0.9rem;
+  }
+
+  .experience__highlights li {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+}
