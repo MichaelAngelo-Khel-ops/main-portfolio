@@ -1,0 +1,26 @@
+
+
+.ms-tools__card-list {
+    list-style: square;
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.ms-tools__card {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+li::marker{
+    color: var(--color-acent)
+}
+
+.ToolsBlock-wrapper{
+    padding: 30px 20px;
+    border: 1px solid var(--color-input-border);
+    background-color: #161A14;
+    height: 100%;
+}

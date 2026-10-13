@@ -1,0 +1,114 @@
+/* {
+    padding: 0 30px;
+    background-color: var(--color-background);
+} */
+.ms-tools-wrapper {
+    margin: 0 auto;
+    max-width: 1280px;
+    padding: 5rem 0;
+    z-index: 1;
+}
+
+ .ms-tools__title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.ms-tools__content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.ms-tools__items {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0px, 1fr));
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.ms-tools__content-text {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding: 40px 60px;
+    border: 1px solid var(--color-input-border);
+    background-color: #161A14;
+}
+
+.ms-tools__description {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    font-size: 18px;
+    line-height: 1.5;
+}
+.ms-tools__description strong {
+    color: var(--color-secondary-text);
+}
+
+.ms-tools-slider {
+    grid-column: 1 / -1;
+    overflow: hidden;
+    border: 1px solid var(--color-primary-text);
+    border-radius: 999px;
+    padding: 24px 0;
+}
+
+.ms-tools-slider-track {
+    display: flex;
+    width: max-content;
+    animation: ms-tools-carousel 40s linear infinite;
+}
+
+.ms-tools-slide-container {
+    display: flex;
+    flex: 0 0 auto;
+    align-items: center;
+    gap: clamp(32px, 4vw, 64px);
+    padding: 0 clamp(32px, 4vw, 64px);
+}
+
+.ms-tools-slide {
+    display: flex;
+    flex: 0 0 56px;
+    align-items: center;
+    justify-content: center;
+    height: 64px;
+}
+
+.ms-tools-slide img {
+    display: block;
+    max-width: 56px;
+    max-height: 64px;
+    object-fit: contain;
+}
+
+@keyframes ms-tools-carousel {
+    to {
+        transform: translateX(-50%);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .ms-tools-slider-track {
+        animation: none;
+    }
+}
+
+@media screen and (max-width: 749px) {
+    .ms-tools__content,
+    .ms-tools__items {
+        grid-template-columns: 1fr;
+    }
+
+    .ms-tools__content-text {
+        padding: 30px 20px;
+    }
+
+    .ms-tools-slider {
+        padding: 18px 0;
+    }
+}

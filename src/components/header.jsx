@@ -1,27 +1,24 @@
-import "./header.css";
+import "./Header.css";
 
 function Header() {
   return (
     <header>
-      <a href="#top">
+      <a href="#Home">
         <h3 className="logo">MS</h3>
       </a>
       <div className="header-right">
         <nav>
-          <a href="#top">Home</a>
-          <a href="#top">About</a>
-          <a href="#top">Tools</a>
-          <a href="#projects">Projects</a>
-          <a href="#testimonials">Experience</a>
-          <a href="#contact">Contact</a>
+          <a href="#Home">Home</a>
+          <a href="#About">About</a>
+          <a href="#Tools">Tools</a>
+          <a href="#Projects">Projects</a>
+          <a href="#Experience">Experience</a>
+          <a href="#Contact">Contact</a>
         </nav>
         <button
           type="button"
-          class="ms-header__mobile-toggle"
-          id="mobile-menu-toggle-{{ section.id }}"
-          aria-label="Open menu"
-          aria-expanded="false"
-          aria-controls="mobile-menu-{{ section.id }}"
+          className="ms-header__mobile-toggle"
+          id="mobile-menu-toggle"
         >
           <span></span>
           <span></span>
