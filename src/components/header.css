@@ -172,4 +172,8 @@ a {
     .ms-header__mobile-toggle {
         flex: 0 0 38px;
     }
+
+    .ms-header-container {
+        padding: 0 1rem;
+    }
 }
