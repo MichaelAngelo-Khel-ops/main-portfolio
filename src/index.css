@@ -314,6 +314,16 @@ li {
   font-weight: bold;
 }
 
+.border-hover:hover {
+  border-color: var(--color-secondary-button-hover-text);
+}
+.border-hover:hover  .tools-title {
+  color: var(--color-secondary-text);
+}
+.border-hover:hover .icon {
+  color: var(--color-secondary-text);
+}
+
 @media screen and (max-width: 749px) {
   .ms-section-heading {
     font-size: var(--mobile-h1-size);

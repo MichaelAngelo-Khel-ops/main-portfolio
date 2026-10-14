@@ -9,7 +9,7 @@ import PeopleIcon from "./svgIcon/PeopleIcon";
 
 export default function AboutUs() {
     return (
-      <div className="ms-about-us" id="About">
+      <div className="ms-about-us" id="About" tabIndex={-1}>
         <div className="ms-about__background-color"></div>
         <div className="ms-about-wrapper ">
           <div className="ms-about__content">

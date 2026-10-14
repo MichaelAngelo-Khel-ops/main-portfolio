@@ -13,7 +13,7 @@ export default function ProjectAccordion() {
   }
 
   return (
-    <section className="projects" id="Projects">
+    <section className="projects" id="Projects" tabIndex={-1}>
       <div className="projects__container">
         <div className="projects__header">
           <h1>Project Journal</h1>

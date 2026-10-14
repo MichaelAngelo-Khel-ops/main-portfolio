@@ -1,0 +1,61 @@
+.navbar {
+    --navbar-height: 80px;
+  
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  
+    min-height: var(--navbar-height);
+    padding: 0 5%;
+  
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  
+    background: #1b1f19;
+    border-bottom: 1px solid #30372c;
+  }
+  
+  .navbar__logo {
+    color: #f5f1e8;
+    font-size: 1.5rem;
+    text-decoration: none;
+  }
+  
+  .navbar__links {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: clamp(1rem, 3vw, 3rem);
+  
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .navbar__links a {
+    color: #f5f1e8;
+    text-decoration: none;
+    transition: color 0.25s ease;
+  }
+  
+  .navbar__links a:hover {
+    color: #acd17e;
+  }
+  
+  .navbar a:focus-visible {
+    outline: 2px solid #acd17e;
+    outline-offset: 5px;
+  }
+  
+  /* Leave scrolling to GSAP, not CSS */
+  html {
+    scroll-behavior: auto;
+  }
+  
+  @media (prefers-reduced-motion: reduce) {
+    .navbar__links a {
+      transition: none;
+    }
+  }

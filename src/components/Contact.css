@@ -99,7 +99,7 @@
   color: var(--color-primary-button-text);
   border-radius: 5px;
 
-  font-family: var(--font-body-family);
+  font-family: var(--font-heading-family);
   font-size: 1.2rem;
   text-decoration: none;
 

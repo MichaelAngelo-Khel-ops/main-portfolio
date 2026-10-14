@@ -5,7 +5,7 @@ import { IconCarousel } from "../JSData/ToolsIconSlide.js";
 
 export default function Tools() {
     return (
-      <div id="Tools" className="ms-tools-wrapper">
+      <div id="Tools" className="ms-tools-wrapper" tabIndex={-1}>
         <div className="ms-tools__title">
           <h1 className="ms-section-heading">My Inventory</h1>
           <div className="div-underline"></div>
@@ -54,19 +54,19 @@ export default function Tools() {
 
           <div className="ms-tools-slider">
             <div className="ms-tools-slider-track">
-                {[0, 1].map((copy) => (
-                  <div
-                    className="ms-tools-slide-container"
-                    key={copy}
-                    aria-hidden={copy === 1}
-                  >
-                    {IconCarousel.map(({ name, icon }) => (
-                      <div className="ms-tools-slide" key={name}>
-                        <img src={icon} alt={copy === 0 ? name : ""} />
-                      </div>
-                    ))}
-                  </div>
-                ))}
+              {[0, 1].map((copy) => (
+                <div
+                  className="ms-tools-slide-container"
+                  key={copy}
+                  aria-hidden={copy === 1}
+                >
+                  {IconCarousel.map(({ name, icon }) => (
+                    <div className="ms-tools-slide" key={name}>
+                      <img src={icon} alt={copy === 0 ? name : ""} />
+                    </div>
+                  ))}
+                </div>
+              ))}
             </div>
           </div>
         </div>

@@ -7,10 +7,10 @@ export default function ToolsBlock({
   toolsList,
 }) {
     return (
-      <div className="ToolsBlock-wrapper">
+      <div className="ToolsBlock-wrapper border-hover title-hover">
         <div className="ms-tools__card">
           {icon}
-          <h3>{blockTitle}</h3>
+          <h3 className="tools-title">{blockTitle}</h3>
           <p className="sub-heading">{blockDescription}</p>
 
           <ul className="ms-tools__card-list">

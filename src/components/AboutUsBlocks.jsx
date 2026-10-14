@@ -2,7 +2,7 @@ import "./AboutUsBlocks.css";
 
 export default function AboutUsBlocks({ Icon, firstText, secondText }) {
   return (
-    <div className="about-container">
+    <div className="about-container border-hover">
       {Icon}
 
       <div className="about-container__text-content">

@@ -8,6 +8,7 @@ export default function Experiences() {
       className="experiences-section"
       id="Experience"
       aria-labelledby="experiences-title"
+      tabIndex={-1}
     >
       <div className="experiences-section__container">
         <div className="experiences-section__heading">

@@ -11,7 +11,12 @@ export default function Contact() {
   )}`;
 
   return (
-    <section className="contact" id="Contact" aria-labelledby="contact-title">
+    <section
+      className="contact"
+      id="Contact"
+      aria-labelledby="contact-title"
+      tabIndex={-1}
+    >
       <div className="contact__container">
         {/* Section heading */}
         <div className="contact__header">
@@ -33,7 +38,7 @@ export default function Contact() {
             <h3>{message.heading}</h3>
             <p className="contact__prompt">{message.description}</p>
 
-            <a className="contact__button" href={emailLink}>
+            <a className="contact__button button-primary" href={emailLink}>
               <Send size={18} aria-hidden="true" />
               {message.buttonText}
             </a>
