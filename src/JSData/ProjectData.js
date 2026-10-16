@@ -12,7 +12,7 @@ export const projects = [
     image: "/images/paris-pretty-banner.png",
     liveUrl: "https://parispretty.com/",
     designer: "Daniel Fernandez",
-    socialUrl: "",
+    socialUrl: "https://www.linkedin.com/in/daniell-fernandez/",
   },
   {
     id: "timber-dealers",
@@ -28,7 +28,7 @@ export const projects = [
     liveUrl: "https://timber-dealers-v2.myshopify.com/",
     liveCode: "https://github.com/MichaelAngelo-Khel-ops/Timber-dealers-Demo",
     designer: "Daniel Fernandez",
-    socialUrl: "",
+    socialUrl: "https://www.linkedin.com/in/daniell-fernandez/",
   },
   {
     id: "Geralds-Burger",
@@ -43,7 +43,23 @@ export const projects = [
     image: "/images/geralddonuts.jpg",
     liveUrl: "https://thoughnuts-w9bymcpy.myshopify.com/",  
     liveCode: "https://github.com/MichaelAngelo-Khel-ops/ThoughNuts-project",
-    designer: "",
-    socialUrl: "",
+    designer: "Daniel Fernandez",
+    socialUrl: "https://www.linkedin.com/in/daniell-fernandez/",
+  },
+  {
+    id: "React-Based",
+    title: "React-Based Interactive Portfolio • Windows-Inspired UI",
+    technologies: ["React", "CSS", "JavaScript", "GSAP"],
+    description:
+      "An interactive developer portfolio built with React and designed around a Windows-inspired desktop interface. Instead of presenting projects through a traditional portfolio layout, the experience uses draggable windows, application-style navigation, taskbar interactions, and animated transitions to create a more engaging way to explore my work.The project uses GSAP to create fluid interface animations and interactions, while GROQ powers an integrated chatbot that uses curated information about my background, skills, experience, and projects as its reference when responding to visitors.The portfolio is built with a component-based React architecture and deployed through Vercel, bringing together front-end development, animation, API integration, and creative UI design into a single interactive experience.",
+      demo: "Demo Password: 1",
+    framework: "React, GSAP and groqCloud",
+    focus: "React, GSAP and AI Chat bot (groq)",
+    technicalStyle: "React Behavior on Groq Chat bot",
+    image: "/images/geralddonuts.jpg",
+    liveUrl: "https://michael-angelo-salonga.vercel.app/",  
+    liveCode: "https://github.com/MichaelAngelo-Khel-ops/React-Projects",
+    designer: "khel",
+    socialUrl: "https://www.linkedin.com/in/michael-angelo-salonga-788998381/",
   },
 ];

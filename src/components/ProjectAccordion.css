@@ -100,8 +100,9 @@
 
 /* EXPANDED CONTENT */
 
-.project__panel[hidden] {
-  display: none;
+.project__panel {
+  height: 0;
+  overflow: hidden;
 }
 
 .project__body {
