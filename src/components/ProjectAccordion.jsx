@@ -2,10 +2,12 @@ import { useLayoutEffect, useRef, useState, useId } from "react";
 import { projects } from "../JSData/ProjectData.js";
 import "./ProjectAccordion.css";
 import gsap from "gsap";
+import ProjectModal from "./ProjectModal";
 
 export default function ProjectAccordion() {
   // The first project is expanded by default.
   const [activeProject, setActiveProject] = useState(projects[0]?.id ?? null);
+  const [selectedProject, setSelectedProject] = useState(null);
   const instanceId = useId();
   const panelRefs = useRef(new Map());
   const previousActiveProject = useRef(activeProject);
@@ -163,13 +165,19 @@ export default function ProjectAccordion() {
                     </div>
 
                     <div className="project__visual">
-                      
-                      <img
-                        src={project.image}
-                        alt={`${project.title} website preview`}
-                        className="project__image"
-                        loading={index === 0 ? "eager" : "lazy"}
-                      />
+                      <button
+                        type="button"
+                        className="project__image-button"
+                        aria-label={`View full image and details for ${project.title}`}
+                        onClick={() => setSelectedProject(project)}
+                      >
+                        <img
+                          src={project.image}
+                          alt={`${project.title} website preview`}
+                          className="project__image"
+                          loading={index === 0 ? "eager" : "lazy"}
+                        />
+                      </button>
 
                       <div className="project__credits">
                         {project.designer && (
@@ -197,6 +205,12 @@ export default function ProjectAccordion() {
           })}
         </div>
       </div>
+      {selectedProject && (
+        <ProjectModal
+          project={selectedProject}
+          onClose={() => setSelectedProject(null)}
+        />
+      )}
     </section>
   );
 }
