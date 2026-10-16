@@ -12,7 +12,7 @@ import {
   Sun,
 } from "lucide-react";
 import { handleNavigation } from "./smoothScroll";
-import "./Header.css";
+import "./header.css";
 
 const navigationLinks = [
   { label: "Home", href: "#Home", Icon: House },
@@ -26,10 +26,59 @@ const navigationLinks = [
 function Header() {
   const [isLightMode, setIsLightMode] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [activeSection, setActiveSection] = useState("Home");
 
   useEffect(() => {
     document.documentElement.classList.toggle("light-mode", isLightMode);
   }, [isLightMode]);
+
+  useEffect(() => {
+    const sections = navigationLinks
+      .map(({ href }) => document.getElementById(href.slice(1)))
+      .filter(Boolean);
+    const header = document.querySelector("header");
+    let animationFrame = 0;
+
+    function updateActiveSection() {
+      const activationPoint = (header?.getBoundingClientRect().bottom ?? 0) + 24;
+      let currentSection = sections[0];
+
+      for (const section of sections) {
+        if (section.getBoundingClientRect().top <= activationPoint) {
+          currentSection = section;
+        }
+      }
+
+      const isAtPageBottom =
+        window.scrollY + window.innerHeight >=
+        document.documentElement.scrollHeight - 1;
+
+      if (isAtPageBottom) {
+        currentSection = sections[sections.length - 1];
+      }
+
+      if (currentSection) setActiveSection(currentSection.id);
+      animationFrame = 0;
+    }
+
+    function scheduleActiveSectionUpdate() {
+      if (!animationFrame) {
+        animationFrame = window.requestAnimationFrame(updateActiveSection);
+      }
+    }
+
+    scheduleActiveSectionUpdate();
+    window.addEventListener("scroll", scheduleActiveSectionUpdate, {
+      passive: true,
+    });
+    window.addEventListener("resize", scheduleActiveSectionUpdate);
+
+    return () => {
+      window.removeEventListener("scroll", scheduleActiveSectionUpdate);
+      window.removeEventListener("resize", scheduleActiveSectionUpdate);
+      if (animationFrame) window.cancelAnimationFrame(animationFrame);
+    };
+  }, []);
 
   useEffect(() => {
     if (!isMenuOpen) return undefined;
@@ -67,7 +116,14 @@ function Header() {
             {navigationLinks.map(({ label, href, Icon }) => (
               <a
                 href={href}
-                className="header-nav__link"
+                className={`header-nav__link${
+                  activeSection === href.slice(1)
+                    ? " header-nav__link--active"
+                    : ""
+                }`}
+                aria-current={
+                  activeSection === href.slice(1) ? "location" : undefined
+                }
                 key={label}
                 onClick={(event) => {
                   setIsMenuOpen(false);
