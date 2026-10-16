@@ -1,16 +1,59 @@
-import { useState, useId } from "react";
+import { useLayoutEffect, useRef, useState, useId } from "react";
 import { projects } from "../JSData/ProjectData.js";
 import "./ProjectAccordion.css";
+import gsap from "gsap";
 
 export default function ProjectAccordion() {
   // The first project is expanded by default.
   const [activeProject, setActiveProject] = useState(projects[0]?.id ?? null);
-
   const instanceId = useId();
+  const panelRefs = useRef(new Map());
+  const previousActiveProject = useRef(activeProject);
 
   function toggleProject(id) {
     setActiveProject((current) => (current === id ? null : id));
   }
+
+  useLayoutEffect(() => {
+    const previousProject = previousActiveProject.current;
+    const isInitialRender = previousProject === activeProject;
+    const panels = panelRefs.current;
+    const duration = window.matchMedia("(prefers-reduced-motion: reduce)").matches
+      ? 0
+      : 0.35;
+
+    projects.forEach((project) => {
+      const panel = panels.get(project.id);
+
+      if (!panel) return;
+
+      gsap.killTweensOf(panel);
+
+      if (isInitialRender) {
+        gsap.set(panel, { height: project.id === activeProject ? "auto" : 0 });
+        return;
+      }
+
+      if (project.id === previousProject && previousProject !== activeProject) {
+        gsap.to(panel, { height: 0, duration, ease: "power2.inOut" });
+      } else if (project.id === activeProject && activeProject !== null) {
+        gsap.fromTo(
+          panel,
+          { height: 0 },
+          { height: "auto", duration, ease: "power2.inOut" },
+        );
+      }
+    });
+
+    previousActiveProject.current = activeProject;
+
+    return () => {
+      projects.forEach((project) => {
+        const panel = panels.get(project.id);
+        if (panel) gsap.killTweensOf(panel);
+      });
+    };
+  }, [activeProject]);
 
   return (
     <section className="projects" id="Projects" tabIndex={-1}>
@@ -63,7 +106,15 @@ export default function ProjectAccordion() {
                   id={panelId}
                   role="region"
                   aria-labelledby={triggerId}
-                  hidden={!isOpen}
+                  aria-hidden={!isOpen}
+                  inert={!isOpen}
+                  ref={(element) => {
+                    if (element) {
+                      panelRefs.current.set(project.id, element);
+                    } else {
+                      panelRefs.current.delete(project.id);
+                    }
+                  }}
                 >
                   <div className="project__body">
                     <div className="project__details">
@@ -112,6 +163,7 @@ export default function ProjectAccordion() {
                     </div>
 
                     <div className="project__visual">
+                      
                       <img
                         src={project.image}
                         alt={`${project.title} website preview`}
