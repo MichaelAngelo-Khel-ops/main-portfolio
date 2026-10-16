@@ -173,7 +173,7 @@ export default function ProjectAccordion() {
 
                       <div className="project__credits">
                         {project.designer && (
-                          <p>
+                          <p className="designer_name">
                             <strong>Designer:</strong> {project.designer}
                           </p>
                         )}
@@ -183,6 +183,7 @@ export default function ProjectAccordion() {
                             href={project.socialUrl}
                             target="_blank"
                             rel="noopener noreferrer"
+                            className="designer__link"
                           >
                             Social Link ↗
                           </a>
