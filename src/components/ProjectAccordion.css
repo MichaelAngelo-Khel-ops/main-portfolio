@@ -225,6 +225,10 @@
     gap: 35px;
   }
 
+  .projects__container {
+    padding: 0;
+  }
+
   .projects__header {
     margin-bottom: 50px;
   }
@@ -236,7 +240,7 @@
 
 @media (max-width: 600px) {
   .projects {
-    padding: 65px 20px;
+    padding: 5rem 2rem;
   }
 
   .project__trigger {
