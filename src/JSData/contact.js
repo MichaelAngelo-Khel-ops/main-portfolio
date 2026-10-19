@@ -50,7 +50,7 @@ export const contact = {
     {
       id: "resume",
       label: "Resume",
-      url: "#",
+      url: "https://drive.google.com/file/d/19ZhHc-FLAs1afUfjXdohWFakhHQnoIfS/view?usp=sharing",
       icon: "file",
     },
   ],
