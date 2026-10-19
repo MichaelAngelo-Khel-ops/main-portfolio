@@ -42,7 +42,6 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    gap: var(--banner-text-gap);
     padding: var(--banner-content-padding);
     text-align: center;
     box-sizing: border-box;

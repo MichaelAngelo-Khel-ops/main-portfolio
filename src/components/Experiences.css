@@ -116,7 +116,7 @@
 
 @media (max-width: 768px) {
   .experiences-section {
-    padding: 70px 20px;
+    padding: 5rem 2rem;
   }
 
   .experiences-section__heading {
@@ -139,5 +139,9 @@
   .experience__highlights li {
     font-size: 0.95rem;
     line-height: 1.7;
+  }
+
+  .experiences-section__container {
+    padding: 0;
   }
 }
