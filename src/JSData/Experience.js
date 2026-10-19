@@ -52,8 +52,8 @@ export const experiences = [
     id: "Foundever / Sitel",
     role: "Sales Adviser / Health Care Specialist",
     company: "Foundever / Sitel",
-    startDate: "2024-03", 
-    endDate: "2025-08",
+    startDate: "2019-09", 
+    endDate: "2024-02",
     highlights: [
       "Became part of the production team focus on delivering high volume of sales and marketing services from multiple clients with different background and source.",
       "Part of the health care Account team that provide healthcare services. Handled fast-paced, high-accountability client interactions, developing strong cross-functional communication skills"
