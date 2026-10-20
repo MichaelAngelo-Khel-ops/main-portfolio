@@ -33,6 +33,7 @@
 .ms-tools__content-text {
     display: flex;
     flex-direction: column;
+    height: 100%;   
     gap: 30px;
     padding: 40px 60px;
     border: 1px solid var(--color-input-border);
